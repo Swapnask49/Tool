@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Utterance Analysis</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="../js/Homepage.js"></script>
+<style>
+</style>
+</head>
+<body>
+<div class="box">
+<h2>LOGIN</h2>
+<form name="myform" onsubmit="return validate()" method="post" action='TaskPage.jsp'>
+<div class="inputBox">
+<input type="text" name="uname" required >
+<label>UserID</label>
+</div>
+<div class="inputBox">
+<i class="fa fa-eye-slash"id="eye" onclick="togglePass()"></i>
+<input type="password" name="pass" id="pwd"required>
+<label>Password</label>
+</div>
+<input type="submit" value="submit" >
+<button  >ResetPassword</button>
+</form>
+</div>
+<script>
+var pwd= document.getElementById('pwd');
+var eye= document.getElementById('eye');
+function togglePass(){
+	eye.classList.toggle('active');
+	if(pwd.type =='password')
+		pwd.type ='text';
+	else
+		pwd.type ='password';
+		
+}
+</script>
+</body>
+</html>

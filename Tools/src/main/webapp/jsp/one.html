@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
+ <form data-ng-submit="return validate()" data-ng-controller="AppCtrl" data-ng-cloak>
+  <input type="radio" data-ng-model="admin" value="admin">AdminLogin
+  <input type="radio" data-ng-model="associate" value="associate">AssociateLogin<br>
+  UserID<input type="text" data-ng-model="uname"><br>
+  Password<input type="password"data-ng-model="pass"><br>
+  <input type="submit" value="submit">
+  </form>
+</div>
+</body>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.uname = "John";
+    $scope.pass = "John";  
+    $scope.validate = function(){
+    	if($scope.uname==)
+    }
+});
+
+</script>
+</html>
